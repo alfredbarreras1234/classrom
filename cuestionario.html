@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cuestionario | CodeSphere</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+<nav class="nav">
+  <!-- Se corrigió el tamaño a uno adecuado para un logo (ej: 150px) y se eliminó el '>' extra -->
+  <img src="./imagenes/ChatGPT Image 8 oct 2026, 07_35_01 a.m..png" style="max-height: 40px; width: auto; object-fit: contain;" alt="Logo CodeSphere">
+
+  <a class="brand" href="index.html">Construye el <span>Futuro Web</span></a>
+  <button class="nav-toggle" aria-label="Abrir menú">☰</button>
+  <button class="theme-toggle" type="button" aria-label="Cambiar modo de color" aria-pressed="false">☾ Modo oscuro</button>
+  <ul id="menu">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="javascript.html">JavaScript</a></li>
+    <li><a href="jquery.html">jQuery</a></li>
+    <li><a href="json.html">JSON</a></li>
+    <li><a href="hosting-dominios.html">Hosting y Dominios</a></li>
+    <li><a href="cuestionario.html">Cuestionario</a></li>
+    <li><a href="herramientas-ia.html">Herramientas IA</a></li>
+  </ul>
+</nav>
+
+</header>
+<main>
+<h1>Cuestionario de repaso</h1>
+<p>Responde las 8 preguntas y presiona <strong>Calificar</strong> para ver tu puntaje y la retroalimentación.</p>
+<form id="quiz-form">
+<fieldset class="question" id="q1"><legend>1. ¿Qué es JavaScript Vanilla?</legend>
+<label><input type="radio" name="q1" value="a"> JavaScript puro, sin librerías ni frameworks</label>
+<label><input type="radio" name="q1" value="b"> Un framework de Google</label>
+<label><input type="radio" name="q1" value="c"> Una versión de Java</label>
+<p class="fb"></p></fieldset>
+<fieldset class="question" id="q2"><legend>2. Verdadero o falso: el CSS define la estructura de una página web.</legend>
+<label><input type="radio" name="q2" value="v"> Verdadero</label>
+<label><input type="radio" name="q2" value="f"> Falso</label>
+<p class="fb"></p></fieldset>
+<fieldset class="question" id="q3"><legend>3. ¿Qué símbolo usa jQuery como función principal?</legend>
+<label><input type="radio" name="q3" value="a"> #</label>
+<label><input type="radio" name="q3" value="b"> $</label>
+<label><input type="radio" name="q3" value="c"> @</label>
+<p class="fb"></p></fieldset>
+<fieldset class="question" id="q4"><legend>4. Verdadero o falso: JSON.parse() convierte una cadena JSON en un objeto JavaScript.</legend>
+<label><input type="radio" name="q4" value="v"> Verdadero</label>
+<label><input type="radio" name="q4" value="f"> Falso</label>
+<p class="fb"></p></fieldset>
+<fieldset class="question" id="q5"><legend>5. ¿Cuál de estos es JSON válido?</legend>
+<label><input type="radio" name="q5" value="a"> {nombre: 'Ana'}</label>
+<label><input type="radio" name="q5" value="b"> {"nombre": "Ana"}</label>
+<label><input type="radio" name="q5" value="c"> {nombre = Ana}</label>
+<p class="fb"></p></fieldset>
+<fieldset class="question" id="q6"><legend>6. Verdadero o falso: Vercel es una plataforma para desplegar proyectos frontend.</legend>
+<label><input type="radio" name="q6" value="v"> Verdadero</label>
+<label><input type="radio" name="q6" value="f"> Falso</label>
+<p class="fb"></p></fieldset>
+<fieldset class="question" id="q7"><legend>7. ¿Cuál es un TLD?</legend>
+<label><input type="radio" name="q7" value="a"> blog</label>
+<label><input type="radio" name="q7" value="b"> .com</label>
+<label><input type="radio" name="q7" value="c"> www</label>
+<p class="fb"></p></fieldset>
+<fieldset class="question" id="q8"><legend>8. Verdadero o falso: el DNS traduce nombres de dominio a direcciones IP.</legend>
+<label><input type="radio" name="q8" value="v"> Verdadero</label>
+<label><input type="radio" name="q8" value="f"> Falso</label>
+<p class="fb"></p></fieldset>
+<button type="submit" class="btn">Calificar</button>
+<button type="reset" class="btn sec">Reiniciar</button>
+</form>
+<div id="result" class="result" role="status"></div>
+</main>
+<footer><p>&copy; 2026 CodeSphere — Proyecto escolar de desarrollo web.</p></footer>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JavaScript | CodeSphere</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+<nav class="nav">
+  <!-- Se corrigió el tamaño a uno adecuado para un logo (ej: 150px) y se eliminó el '>' extra -->
+  <img src="./imagenes/ChatGPT Image 8 oct 2026, 07_35_01 a.m..png" style="max-height: 40px; width: auto; object-fit: contain;" alt="Logo CodeSphere">
+
+  <a class="brand" href="index.html">Construye el <span>Futuro Web</span></a>
+  <button class="nav-toggle" aria-label="Abrir menú">☰</button>
+  <button class="theme-toggle" type="button" aria-label="Cambiar modo de color" aria-pressed="false">☾ Modo oscuro</button>
+  <ul id="menu">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="javascript.html">JavaScript</a></li>
+    <li><a href="jquery.html">jQuery</a></li>
+    <li><a href="json.html">JSON</a></li>
+    <li><a href="hosting-dominios.html">Hosting y Dominios</a></li>
+    <li><a href="cuestionario.html">Cuestionario</a></li>
+    <li><a href="herramientas-ia.html">Herramientas IA</a></li>
+  </ul>
+</nav>
+
+</header>
+<main>
+<h1>JavaScript Vanilla</h1>
+<h2>Concepto</h2>
+<p><strong>JavaScript Vanilla</strong> es JavaScript puro: el lenguaje estándar del navegador usado sin librerías ni frameworks como jQuery, React o Vue. Permite que una página reaccione al usuario, modifique su contenido y se comunique con servidores.</p>
+<h2>El trinomio HTML, CSS y JS</h2>
+<div class="grid">
+<div class="card"><h3>HTML</h3><p>Define la <strong>estructura</strong> y el contenido: títulos, párrafos, formularios, imágenes.</p></div>
+<div class="card"><h3>CSS</h3><p>Define la <strong>presentación</strong>: colores, tipografías, espacios y diseño responsivo.</p></div>
+<div class="card"><h3>JS</h3><p>Define el <strong>comportamiento</strong>: interacciones, validaciones y datos dinámicos.</p></div>
+</div>
+<h2>Variables, funciones y eventos</h2>
+<ul>
+<li><strong>Variables:</strong> guardan datos. Se declaran con <code>let</code> (valor cambiable) o <code>const</code> (valor constante).</li>
+<li><strong>Funciones:</strong> bloques de código reutilizables que pueden recibir parámetros y devolver un resultado.</li>
+<li><strong>Eventos:</strong> acciones del usuario (clic, teclado, envío de formulario) que se capturan con <code>addEventListener</code>.</li>
+</ul>
+<h3>Ejemplo de código</h3>
+<pre><code><span class="c">// Variables</span>
+<span class="k">const</span> nombre = <span class="s">"CodeSphere"</span>;
+<span class="k">let</span> visitas = <span class="n">0</span>;
+
+<span class="c">// Función</span>
+<span class="k">function</span> saludar(usuario) {
+  <span class="k">return</span> <span class="s">"Hola, "</span> + usuario + <span class="s">" bienvenido a "</span> + nombre;
+}
+
+<span class="c">// Evento</span>
+document.getElementById(<span class="s">"btn"</span>).addEventListener(<span class="s">"click"</span>, <span class="k">function</span> () {
+  visitas++;
+  alert(saludar(<span class="s">"Alfred"</span>) + <span class="s">" - clics: "</span> + visitas);
+});</code></pre>
+<h2>Cuadro comparativo</h2>
+<div class="table-wrap"><table>
+<tr><th>Tecnología</th><th>Función</th><th>Ejemplo</th></tr>
+<tr><td>HTML</td><td>Estructura</td><td><code>&lt;h1&gt;Título&lt;/h1&gt;</code></td></tr>
+<tr><td>CSS</td><td>Estilo</td><td><code>h1 { color: #0EA5E9; }</code></td></tr>
+<tr><td>JavaScript</td><td>Comportamiento</td><td><code>alert("Hola");</code></td></tr>
+</table></div>
+<div class="note">Nota: aprender JS Vanilla primero facilita entender cualquier librería o framework después.</div>
+<h2>Fuentes / Bibliografía</h2>
+<ul>
+<li>MDN Web Docs. <em>JavaScript</em>. <a href="https://developer.mozilla.org/es/docs/Web/JavaScript" target="_blank" rel="noopener">developer.mozilla.org/es/docs/Web/JavaScript</a></li>
+<li>W3Schools. <em>JavaScript Tutorial</em>. <a href="https://www.w3schools.com/js/" target="_blank" rel="noopener">w3schools.com/js</a></li>
+</ul>
+</main>
+<footer><p>&copy; 2026 CodeSphere — Proyecto escolar de desarrollo web.</p></footer>
+<script src="script.js"></script>
+</body>
+</html>

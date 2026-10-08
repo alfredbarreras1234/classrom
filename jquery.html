@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>jQuery | CodeSphere</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+<nav class="nav">
+  <!-- Se corrigió el tamaño a uno adecuado para un logo (ej: 150px) y se eliminó el '>' extra -->
+  <img src="./imagenes/ChatGPT Image 8 oct 2026, 07_35_01 a.m..png" style="max-height: 40px; width: auto; object-fit: contain;" alt="Logo CodeSphere">
+
+  <a class="brand" href="index.html">Construye el <span>Futuro Web</span></a>
+  <button class="nav-toggle" aria-label="Abrir menú">☰</button>
+  <button class="theme-toggle" type="button" aria-label="Cambiar modo de color" aria-pressed="false">☾ Modo oscuro</button>
+  <ul id="menu">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="javascript.html">JavaScript</a></li>
+    <li><a href="jquery.html">jQuery</a></li>
+    <li><a href="json.html">JSON</a></li>
+    <li><a href="hosting-dominios.html">Hosting y Dominios</a></li>
+    <li><a href="cuestionario.html">Cuestionario</a></li>
+    <li><a href="herramientas-ia.html">Herramientas IA</a></li>
+  </ul>
+</nav>
+</header>
+<main>
+<h1>jQuery</h1>
+<h2>¿Qué es jQuery y por qué nació?</h2>
+<p><strong>jQuery</strong> es una librería de JavaScript creada por John Resig en 2006. Nació para simplificar tareas como seleccionar elementos, manejar eventos, animar y hacer peticiones AJAX, en una época en la que los navegadores eran muy incompatibles entre sí. Su lema: <em>"escribe menos, haz más"</em>.</p>
+<h2>Sintaxis del selector $</h2>
+<p>La función <code>$</code> (alias de <code>jQuery</code>) selecciona elementos con selectores CSS y permite encadenar acciones.</p>
+<pre><code><span class="c">// $(selector).acción();</span>
+$(<span class="s">"#titulo"</span>).text(<span class="s">"Hola jQuery"</span>);
+$(<span class="s">".tarjeta"</span>).addClass(<span class="s">"activa"</span>);
+$(<span class="s">"p"</span>).css(<span class="s">"color"</span>, <span class="s">"#10B981"</span>).fadeIn();</code></pre>
+<h2>Comparativa: JS Vanilla vs jQuery</h2>
+<div class="table-wrap"><table>
+<tr><th>Tarea</th><th>JS Vanilla</th><th>jQuery</th></tr>
+<tr><td>Seleccionar</td><td><code>document.querySelector("#caja")</code></td><td><code>$("#caja")</code></td></tr>
+<tr><td>Ocultar</td><td><code>el.style.display = "none";</code></td><td><code>$("#caja").hide();</code></td></tr>
+<tr><td>Clic</td><td><code>el.addEventListener("click", fn);</code></td><td><code>$("#caja").click(fn);</code></td></tr>
+<tr><td>AJAX</td><td><code>fetch(url).then(r =&gt; r.json())</code></td><td><code>$.getJSON(url, fn);</code></td></tr>
+</table></div>
+<h2>Ventajas y desventajas</h2>
+<div class="grid">
+<div class="card"><h3>Ventajas</h3><ul><li>Sintaxis corta y fácil.</li><li>Encadenamiento de métodos.</li><li>Gran cantidad de plugins y documentación.</li><li>Compatibilidad entre navegadores.</li></ul></div>
+<div class="card"><h3>Desventajas</h3><ul><li>Añade peso extra a la página.</li><li>JS moderno ya cubre gran parte de sus funciones.</li><li>Menos usado en proyectos nuevos.</li><li>No sustituye a frameworks de interfaz modernos.</li></ul></div>
+</div>
+<h2>Fuentes / Bibliografía</h2>
+<ul>
+<li>jQuery Foundation. <em>jQuery API Documentation</em>. <a href="https://api.jquery.com/" target="_blank" rel="noopener">api.jquery.com</a></li>
+<li>W3Schools. <em>jQuery Tutorial</em>. <a href="https://www.w3schools.com/jquery/" target="_blank" rel="noopener">w3schools.com/jquery</a></li>
+<li>MDN Web Docs. <em>Fetch API</em>. <a href="https://developer.mozilla.org/es/docs/Web/API/Fetch_API" target="_blank" rel="noopener">developer.mozilla.org/es/docs/Web/API/Fetch_API</a></li>
+</ul>
+</main>
+<footer><p>&copy; 2026 CodeSphere — Proyecto escolar de desarrollo web.</p></footer>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JSON | CodeSphere</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+<nav class="nav">
+  <!-- Se corrigió el tamaño a uno adecuado para un logo (ej: 150px) y se eliminó el '>' extra -->
+  <img src="./imagenes/ChatGPT Image 8 oct 2026, 07_35_01 a.m..png" style="max-height: 40px; width: auto; object-fit: contain;" alt="Logo CodeSphere">
+
+  <a class="brand" href="index.html">Construye el <span>Futuro Web</span></a>
+  <button class="nav-toggle" aria-label="Abrir menú">☰</button>
+  <button class="theme-toggle" type="button" aria-label="Cambiar modo de color" aria-pressed="false">☾ Modo oscuro</button>
+  <ul id="menu">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="javascript.html">JavaScript</a></li>
+    <li><a href="jquery.html">jQuery</a></li>
+    <li><a href="json.html">JSON</a></li>
+    <li><a href="hosting-dominios.html">Hosting y Dominios</a></li>
+    <li><a href="cuestionario.html">Cuestionario</a></li>
+    <li><a href="herramientas-ia.html">Herramientas IA</a></li>
+  </ul>
+</nav>
+
+</header>
+<main>
+<h1>JSON</h1>
+<h2>¿Qué es JSON y por qué es el estándar?</h2>
+<p><strong>JSON</strong> (JavaScript Object Notation) es un formato de texto ligero para intercambiar datos. Es el estándar porque es fácil de leer para humanos, simple de procesar para las máquinas, independiente del lenguaje y nativo en JavaScript.</p>
+<h2>Estructura</h2>
+<ul>
+<li><strong>Clave-valor:</strong> <code>"nombre": "Ana"</code>. La clave siempre va entre comillas dobles.</li>
+<li><strong>Objetos:</strong> conjuntos de pares clave-valor entre llaves <code>{ }</code>.</li>
+<li><strong>Arreglos:</strong> listas ordenadas entre corchetes <code>[ ]</code>.</li>
+<li><strong>Valores permitidos:</strong> cadena, número, booleano, <code>null</code>, objeto y arreglo.</li>
+</ul>
+<h2>Objeto JS vs Cadena JSON</h2>
+<pre><code><span class="c">// Objeto JavaScript</span>
+<span class="k">const</span> alumno = {
+  nombre: <span class="s">'Ana'</span>,
+  edad: <span class="n">17</span>,
+  materias: [<span class="s">'HTML'</span>, <span class="s">'CSS'</span>, <span class="s">'JS'</span>]
+};
+
+<span class="c">// Cadena JSON (texto)</span>
+<span class="k">const</span> texto = <span class="s">'{"nombre":"Ana","edad":17,"materias":["HTML","CSS","JS"]}'</span>;
+
+<span class="c">// Conversión</span>
+<span class="k">const</span> aTexto = JSON.stringify(alumno);
+<span class="k">const</span> aObjeto = JSON.parse(texto);
+console.log(aObjeto.nombre);</code></pre>
+<div class="table-wrap"><table>
+<tr><th>Característica</th><th>Objeto JS</th><th>Cadena JSON</th></tr>
+<tr><td>Tipo</td><td>Estructura en memoria</td><td>Texto</td></tr>
+<tr><td>Claves</td><td>Sin comillas o con ellas</td><td>Siempre comillas dobles</td></tr>
+<tr><td>Comillas en texto</td><td>Simples o dobles</td><td>Solo dobles</td></tr>
+<tr><td>Funciones</td><td>Permitidas</td><td>No permitidas</td></tr>
+</table></div>
+<h2>Comunicación con APIs y servidores</h2>
+<p>El navegador (cliente) envía una petición a una API y el servidor responde normalmente con JSON. Después, el cliente convierte ese texto en objeto y lo muestra en la página.</p>
+<pre><code>fetch(<span class="s">"https://api.ejemplo.com/usuarios"</span>)
+  .then(<span class="k">function</span> (respuesta) { <span class="k">return</span> respuesta.json(); })
+  .then(<span class="k">function</span> (datos) { console.log(datos); })
+  .catch(<span class="k">function</span> (error) { console.error(error); });</code></pre>
+<h2>Fuentes / Bibliografía</h2>
+<ul>
+<li>MDN Web Docs. <em>JSON</em>. <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/JSON" target="_blank" rel="noopener">developer.mozilla.org</a></li>
+<li>W3Schools. <em>JSON Tutorial</em>. <a href="https://www.w3schools.com/js/js_json_intro.asp" target="_blank" rel="noopener">w3schools.com/js/js_json_intro.asp</a></li>
+<li>json.org. <em>Introducing JSON</em>. <a href="https://www.json.org/json-es.html" target="_blank" rel="noopener">json.org</a></li>
+</ul>
+</main>
+<footer><p>&copy; 2026 CodeSphere — Proyecto escolar de desarrollo web.</p></footer>
+<script src="script.js"></script>
+</body>
+</html>

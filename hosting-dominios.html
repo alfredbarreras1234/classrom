@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hosting y Dominios | CodeSphere</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+<nav class="nav">
+  <!-- Se corrigió el tamaño a uno adecuado para un logo (ej: 150px) y se eliminó el '>' extra -->
+  <img src="./imagenes/ChatGPT Image 8 oct 2026, 07_35_01 a.m..png" style="max-height: 40px; width: auto; object-fit: contain;" alt="Logo CodeSphere">
+
+  <a class="brand" href="index.html">Construye el <span>Futuro Web</span></a>
+  <button class="nav-toggle" aria-label="Abrir menú">☰</button>
+  <button class="theme-toggle" type="button" aria-label="Cambiar modo de color" aria-pressed="false">☾ Modo oscuro</button>
+  <ul id="menu">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="javascript.html">JavaScript</a></li>
+    <li><a href="jquery.html">jQuery</a></li>
+    <li><a href="json.html">JSON</a></li>
+    <li><a href="hosting-dominios.html">Hosting y Dominios</a></li>
+    <li><a href="cuestionario.html">Cuestionario</a></li>
+    <li><a href="herramientas-ia.html">Herramientas IA</a></li>
+  </ul>
+</nav>
+
+</header>
+<main>
+<h1>Hosting y Dominios</h1>
+<h2>Web Hosting: tipos</h2>
+<div class="table-wrap"><table>
+<tr><th>Tipo</th><th>Descripción</th><th>Ideal para</th></tr>
+<tr><td>Compartido</td><td>Varios sitios comparten un mismo servidor y sus recursos.</td><td>Blogs y sitios pequeños, bajo costo.</td></tr>
+<tr><td>VPS</td><td>Servidor virtual con recursos dedicados y control del sistema.</td><td>Proyectos medianos que necesitan configuración propia.</td></tr>
+<tr><td>Nube</td><td>Recursos distribuidos en varios servidores, escalan según la demanda.</td><td>Aplicaciones con tráfico variable o alto.</td></tr>
+</table></div>
+<h3>¿Qué es Vercel?</h3>
+<p><strong>Vercel</strong> es una plataforma en la nube para desplegar sitios y aplicaciones frontend. Se conecta con GitHub, publica automáticamente cada vez que subes cambios, entrega HTTPS y ofrece un plan gratuito para proyectos personales y escolares. Es la empresa creadora de Next.js.</p>
+<h2>Dominios</h2>
+<ul>
+<li><strong>TLD (dominio de nivel superior):</strong> la terminación del dominio. <code>.com</code> (comercial), <code>.net</code> (redes y tecnología), <code>.org</code> (organizaciones).</li>
+<li><strong>Subdominio:</strong> prefijo antes del dominio principal, por ejemplo <code>blog.codesphere.com</code> o <code>tienda.codesphere.com</code>.</li>
+</ul>
+<h2>Flujo de propagación DNS</h2>
+<p>El DNS (Sistema de Nombres de Dominio) traduce un nombre como <code>codesphere.com</code> en una dirección IP.</p>
+<div class="flow">
+<div class="step"><b>1</b>Usuario escribe el dominio en el navegador</div><div class="arrow">&#10140;</div>
+<div class="step"><b>2</b>Resolver DNS (ISP) consulta su caché</div><div class="arrow">&#10140;</div>
+<div class="step"><b>3</b>Servidor raíz indica el servidor del TLD (.com)</div><div class="arrow">&#10140;</div>
+<div class="step"><b>4</b>Servidor autoritativo entrega la IP</div><div class="arrow">&#10140;</div>
+<div class="step"><b>5</b>El navegador se conecta al hosting y carga el sitio</div>
+</div>
+<div class="note">Al cambiar los registros DNS, la propagación puede tardar desde minutos hasta 48 horas, porque cada resolver guarda en caché la información según su TTL.</div>
+<h2>Fuentes / Bibliografía</h2>
+<ul>
+<li>Vercel. <em>Documentation</em>. <a href="https://vercel.com/docs" target="_blank" rel="noopener">vercel.com/docs</a></li>
+<li>MDN Web Docs. <em>¿Qué es un nombre de dominio?</em> <a href="https://developer.mozilla.org/es/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name" target="_blank" rel="noopener">developer.mozilla.org</a></li>
+<li>Cloudflare Learning Center. <em>¿Qué es el DNS?</em> <a href="https://www.cloudflare.com/es-la/learning/dns/what-is-dns/" target="_blank" rel="noopener">cloudflare.com</a></li>
+</ul>
+</main>
+<footer><p>&copy; 2026 CodeSphere — Proyecto escolar de desarrollo web.</p></footer>
+<script src="script.js"></script>
+</body>
+</html>
