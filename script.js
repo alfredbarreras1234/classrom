@@ -27,6 +27,40 @@ document.addEventListener("DOMContentLoaded", function () {
     if (a.getAttribute("href") === actual) { a.classList.add("active"); }
   });
 
+  var contactForm = document.getElementById("contact-form");
+  if (contactForm) {
+    var contactStatus = document.getElementById("contact-status");
+    var contactButton = contactForm.querySelector('button[type="submit"]');
+    contactForm.addEventListener("submit", async function (e) {
+      e.preventDefault();
+      contactButton.disabled = true;
+      contactStatus.textContent = "Enviando mensaje...";
+      contactStatus.setAttribute("aria-busy", "true");
+      try {
+        var response = await fetch("/api/contact", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            name: contactForm.elements.namedItem("name").value.trim(),
+            email: contactForm.elements.namedItem("email").value.trim(),
+            message: contactForm.elements.namedItem("message").value.trim()
+          })
+        });
+        var result = await response.json();
+        if (!response.ok) {
+          throw new Error(result.error || "No se pudo enviar el mensaje.");
+        }
+        contactStatus.textContent = "¡Mensaje enviado! Gracias por contactarnos.";
+        contactForm.reset();
+      } catch (error) {
+        contactStatus.textContent = error.message || "No se pudo enviar el mensaje. Inténtalo de nuevo.";
+      } finally {
+        contactButton.disabled = false;
+        contactStatus.removeAttribute("aria-busy");
+      }
+    });
+  }
+
   var form = document.getElementById("quiz-form");
   if (!form) { return; }
   var respuestas = {

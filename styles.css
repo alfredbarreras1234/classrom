@@ -28,6 +28,13 @@ ul,ol{padding-left:1.4rem}
 .swatch{border-radius:10px;padding:1.2rem;color:#fff;font-weight:600}
 .swatch small{display:block;font-weight:400;margin-top:.4rem}
 .note{background:var(--nota);border-left:5px solid var(--turquesa);padding:.8rem 1rem;border-radius:6px;margin:1rem 0}
+.contact-form{max-width:680px}
+.contact-form label{display:block;font-weight:600;margin:.9rem 0 .3rem}
+.contact-form input,.contact-form textarea{display:block;width:100%;padding:.75rem;border:1px solid var(--borde);border-radius:8px;background:var(--superficie);color:var(--texto);font:inherit}
+.contact-form textarea{min-height:170px;resize:vertical}
+.contact-form input:focus,.contact-form textarea:focus{outline:2px solid var(--turquesa);outline-offset:2px}
+.contact-status{margin-top:1rem;font-weight:600}
+.contact-status:empty{display:none}
 .table-wrap{overflow-x:auto;margin-bottom:1rem}
 table{width:100%;border-collapse:collapse;background:var(--superficie);border-radius:8px;overflow:hidden}
 th,td{padding:.7rem .8rem;text-align:left;border-bottom:1px solid var(--borde);vertical-align:top}

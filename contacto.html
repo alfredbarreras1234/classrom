@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contacto | CodeSphere</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+<nav class="nav">
+  <img src="./imagenes/ChatGPT Image 8 oct 2026, 07_35_01 a.m..png" style="max-height: 40px; width: auto; object-fit: contain;" alt="Logo CodeSphere">
+  <a class="brand" href="index.html">Construye el <span>Futuro Web</span></a>
+  <button class="nav-toggle" aria-label="Abrir menú">☰</button>
+  <button class="theme-toggle" type="button" aria-label="Cambiar modo de color" aria-pressed="false">☾ Modo oscuro</button>
+  <ul id="menu">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="javascript.html">JavaScript</a></li>
+    <li><a href="jquery.html">jQuery</a></li>
+    <li><a href="json.html">JSON</a></li>
+    <li><a href="hosting-dominios.html">Hosting y Dominios</a></li>
+    <li><a href="cuestionario.html">Cuestionario</a></li>
+    <li><a href="herramientas-ia.html">Herramientas IA</a></li>
+    <li><a href="contacto.html">Contacto</a></li>
+  </ul>
+</nav>
+</header>
+<main>
+<h1>Contacto</h1>
+<p>¿Tienes una pregunta o sugerencia? Puedes abrir nuestro canal de Discord o enviar el formulario cuando esté configurado.</p>
+<p><a class="btn sec" href="https://discord.com/channels/1558110260764614658/1558110261846609995" target="_blank" rel="noopener noreferrer">Abrir canal de Discord</a></p>
+<form id="contact-form" class="contact-form">
+  <label for="contact-name">Nombre</label>
+  <input id="contact-name" name="name" type="text" maxlength="100" autocomplete="name" required>
+  <label for="contact-email">Correo electrónico</label>
+  <input id="contact-email" name="email" type="email" maxlength="254" autocomplete="email" required>
+  <label for="contact-message">Mensaje</label>
+  <textarea id="contact-message" name="message" maxlength="1500" required></textarea>
+  <button type="submit" class="btn">Enviar mensaje</button>
+</form>
+<p id="contact-status" class="contact-status" role="status" aria-live="polite"></p>
+<div class="note">El botón abre el canal; no envía el contenido del formulario. Para activar el envío automático, en Vercel ve a <strong>Settings &gt; Environment Variables</strong>, agrega <code>DISCORD_WEBHOOK_URL</code> con la URL del webhook de tu canal y vuelve a desplegar el proyecto. Mantén esa URL solo en Vercel; no la publiques en el código.</div>
+</main>
+<footer><p>&copy; 2026 CodeSphere — Proyecto escolar de desarrollo web.</p></footer>
+<script src="script.js"></script>
+</body>
+</html>
