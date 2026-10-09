@@ -13,6 +13,8 @@ a{color:var(--turquesa)}
 .nav-toggle{display:none;background:var(--turquesa);color:#fff;border:0;border-radius:6px;font-size:1.3rem;padding:.2rem .7rem;cursor:pointer}
 .theme-toggle{background:transparent;color:#fff;border:1px solid #94a3b8;border-radius:6px;padding:.4rem .65rem;font-size:.9rem;cursor:pointer;white-space:nowrap}
 .theme-toggle:hover{background:var(--turquesa);border-color:var(--turquesa)}
+.lang-toggle{background:transparent;color:#fff;border:1px solid #94a3b8;border-radius:6px;padding:.4rem .65rem;font-size:.9rem;cursor:pointer;white-space:nowrap}
+.lang-toggle:hover{background:var(--turquesa);border-color:var(--turquesa)}
 .hero{background:linear-gradient(135deg,var(--azul),#0f3a5c);color:#fff;text-align:center;padding:4rem 1rem}
 .hero h1{font-size:2.6rem}
 .hero p{max-width:700px;margin:1rem auto}

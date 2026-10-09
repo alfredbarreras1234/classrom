@@ -4,6 +4,110 @@ document.addEventListener("DOMContentLoaded", function () {
   if (toggle && menu) {
     toggle.addEventListener("click", function () { menu.classList.toggle("open"); });
   }
+
+  var translations = {
+    es: {
+      "brand-prefix": "Construye el",
+      "brand-accent": "Futuro Web",
+      "nav-home": "Inicio",
+      "nav-javascript": "JavaScript",
+      "nav-jquery": "jQuery",
+      "nav-json": "JSON",
+      "nav-hosting": "Hosting y Dominios",
+      "nav-quiz": "Cuestionario",
+      "nav-ai": "Herramientas IA",
+      "nav-contact": "Contacto",
+      "js-title": "JavaScript Vanilla",
+      "concept-title": "Concepto",
+      "concept-text": "JavaScript Vanilla es JavaScript puro: el lenguaje estándar del navegador usado sin librerías ni frameworks como jQuery, React o Vue. Permite que una página reaccione al usuario, modifique su contenido y se comunique con servidores.",
+      "trinomio-title": "El trinomio HTML, CSS y JS",
+      "html-title": "HTML",
+      "html-text": "Define la estructura y el contenido: títulos, párrafos, formularios, imágenes.",
+      "css-title": "CSS",
+      "css-text": "Define la presentación: colores, tipografías, espacios y diseño responsivo.",
+      "js-card-title": "JS",
+      "js-card-text": "Define el comportamiento: interacciones, validaciones y datos dinámicos.",
+      "variables-title": "Variables, funciones y eventos",
+      "variables-text": "Variables: guardan datos. Se declaran con let (valor cambiable) o const (valor constante).",
+      "functions-text": "Funciones: bloques de código reutilizables que pueden recibir parámetros y devolver un resultado.",
+      "events-text": "Eventos: acciones del usuario (clic, teclado, envío de formulario) que se capturan con addEventListener.",
+      "code-example-title": "Ejemplo de código",
+      "table-title": "Cuadro comparativo",
+      "table-tech": "Tecnología",
+      "table-func": "Función",
+      "table-example": "Ejemplo",
+      "html-struct": "Estructura",
+      "css-struct": "Estilo",
+      "js-struct": "Comportamiento",
+      "note-text": "Nota: aprender JS Vanilla primero facilita entender cualquier librería o framework después.",
+      "sources-title": "Fuentes / Bibliografía"
+    },
+    en: {
+      "brand-prefix": "Build the",
+      "brand-accent": "Web Future",
+      "nav-home": "Home",
+      "nav-javascript": "JavaScript",
+      "nav-jquery": "jQuery",
+      "nav-json": "JSON",
+      "nav-hosting": "Hosting and Domains",
+      "nav-quiz": "Quiz",
+      "nav-ai": "AI Tools",
+      "nav-contact": "Contact",
+      "js-title": "JavaScript Vanilla",
+      "concept-title": "Concept",
+      "concept-text": "JavaScript Vanilla is pure JavaScript: the standard browser language used without libraries or frameworks such as jQuery, React, or Vue. It allows a page to react to the user, modify its content, and communicate with servers.",
+      "trinomio-title": "The HTML, CSS, and JS trio",
+      "html-title": "HTML",
+      "html-text": "Defines the structure and content: headings, paragraphs, forms, images.",
+      "css-title": "CSS",
+      "css-text": "Defines the presentation: colors, typography, spacing, and responsive design.",
+      "js-card-title": "JS",
+      "js-card-text": "Defines behavior: interactions, validations, and dynamic data.",
+      "variables-title": "Variables, functions, and events",
+      "variables-text": "Variables: store data. They are declared with let (changeable value) or const (constant value).",
+      "functions-text": "Functions: reusable code blocks that can receive parameters and return a result.",
+      "events-text": "Events: user actions (click, keyboard, form submission) that are captured with addEventListener.",
+      "code-example-title": "Code example",
+      "table-title": "Comparison table",
+      "table-tech": "Technology",
+      "table-func": "Function",
+      "table-example": "Example",
+      "html-struct": "Structure",
+      "css-struct": "Style",
+      "js-struct": "Behavior",
+      "note-text": "Note: learning JS Vanilla first makes it easier to understand any library or framework afterward.",
+      "sources-title": "Sources / Bibliography"
+    }
+  };
+
+  var langToggle = document.querySelector(".lang-toggle");
+  function applyLanguage(language) {
+    var current = translations[language] ? language : "es";
+    document.documentElement.lang = current;
+    document.querySelectorAll("[data-i18n]").forEach(function (node) {
+      var key = node.getAttribute("data-i18n");
+      if (translations[current][key]) {
+        node.textContent = translations[current][key];
+      }
+    });
+    if (langToggle) {
+      langToggle.dataset.lang = current === "es" ? "en" : "es";
+      langToggle.textContent = current === "es" ? "English" : "Español";
+      langToggle.setAttribute("aria-label", current === "es" ? "Cambiar idioma a inglés" : "Cambiar idioma a español");
+    }
+    localStorage.setItem("codesphere-language", current);
+  }
+
+  if (langToggle) {
+    langToggle.addEventListener("click", function () {
+      var nextLanguage = langToggle.dataset.lang || "en";
+      applyLanguage(nextLanguage);
+    });
+  }
+
+  var savedLanguage = localStorage.getItem("codesphere-language");
+  applyLanguage(savedLanguage === "en" ? "en" : "es");
+
   var themeToggle = document.querySelector(".theme-toggle");
   var savedTheme = localStorage.getItem("codesphere-theme");
   function applyTheme(theme) {
