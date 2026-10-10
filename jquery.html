@@ -30,28 +30,30 @@
 </header>
 <main>
 <h1 data-i18n="page-heading-jquery">jQuery</h1>
-<h2>¿Qué es jQuery y por qué nació?</h2>
-<p><strong>jQuery</strong> es una librería de JavaScript creada por John Resig en 2006. Nació para simplificar tareas como seleccionar elementos, manejar eventos, animar y hacer peticiones AJAX, en una época en la que los navegadores eran muy incompatibles entre sí. Su lema: <em>"escribe menos, haz más"</em>.</p>
-<h2>Sintaxis del selector $</h2>
-<p>La función <code>$</code> (alias de <code>jQuery</code>) selecciona elementos con selectores CSS y permite encadenar acciones.</p>
-<pre><code><span class="c">// $(selector).acción();</span>
-$(<span class="s">"#titulo"</span>).text(<span class="s">"Hola jQuery"</span>);
+<h2 data-i18n="jquery-origin-title">¿Qué es jQuery y por qué nació?</h2>
+<p data-i18n-html="jquery-origin-text"><strong>jQuery</strong> es una librería de JavaScript creada por John Resig en 2006. Nació para simplificar tareas como seleccionar elementos, manejar eventos, animar y hacer peticiones AJAX, en una época en la que los navegadores eran muy incompatibles entre sí. Su lema: <em>"escribe menos, haz más"</em>.</p>
+<h2 data-i18n="jquery-syntax-title">Sintaxis del selector $</h2>
+<p data-i18n-html="jquery-syntax-text">La función <code>$</code> (alias de <code>jQuery</code>) selecciona elementos con selectores CSS y permite encadenar acciones.</p>
+<pre><code><span class="c" data-i18n="jquery-code-comment">// $(selector).acción();</span>
+$(<span class="s">"#titulo"</span>).text(<span class="s" data-i18n="jquery-code-hello">"Hola jQuery"</span>);
 $(<span class="s">".tarjeta"</span>).addClass(<span class="s">"activa"</span>);
 $(<span class="s">"p"</span>).css(<span class="s">"color"</span>, <span class="s">"#10B981"</span>).fadeIn();</code></pre>
-<h2>Comparativa: JS Vanilla vs jQuery</h2>
+<h2 data-i18n="jquery-compare-title">Comparativa: JS Vanilla vs jQuery</h2>
 <div class="table-wrap"><table>
-<tr><th>Tarea</th><th>JS Vanilla</th><th>jQuery</th></tr>
-<tr><td>Seleccionar</td><td><code>document.querySelector("#caja")</code></td><td><code>$("#caja")</code></td></tr>
-<tr><td>Ocultar</td><td><code>el.style.display = "none";</code></td><td><code>$("#caja").hide();</code></td></tr>
-<tr><td>Clic</td><td><code>el.addEventListener("click", fn);</code></td><td><code>$("#caja").click(fn);</code></td></tr>
+<tr><th data-i18n="jquery-task">Tarea</th><th>JS Vanilla</th><th>jQuery</th></tr>
+<tr><td data-i18n="jquery-select">Seleccionar</td><td><code>document.querySelector("#caja")</code></td><td><code>$("#caja")</code></td></tr>
+<tr><td data-i18n="jquery-hide">Ocultar</td><td><code>el.style.display = "none";</code></td><td><code>$("#caja").hide();</code></td></tr>
+<tr><td data-i18n="jquery-click">Clic</td><td><code>el.addEventListener("click", fn);</code></td><td><code>$("#caja").click(fn);</code></td></tr>
 <tr><td>AJAX</td><td><code>fetch(url).then(r =&gt; r.json())</code></td><td><code>$.getJSON(url, fn);</code></td></tr>
 </table></div>
-<h2>Ventajas y desventajas</h2>
+<h2 data-i18n="jquery-pros-cons-title">Ventajas y desventajas</h2>
 <div class="grid">
-<div class="card"><h3>Ventajas</h3><ul><li>Sintaxis corta y fácil.</li><li>Encadenamiento de métodos.</li><li>Gran cantidad de plugins y documentación.</li><li>Compatibilidad entre navegadores.</li></ul></div>
-<div class="card"><h3>Desventajas</h3><ul><li>Añade peso extra a la página.</li><li>JS moderno ya cubre gran parte de sus funciones.</li><li>Menos usado en proyectos nuevos.</li><li>No sustituye a frameworks de interfaz modernos.</li></ul></div>
+<div class="card"><h3 data-i18n="jquery-pros">Ventajas</h3><ul>
+<li data-i18n="jquery-pro-1">Sintaxis corta y fácil.</li><li data-i18n="jquery-pro-2">Encadenamiento de métodos.</li><li data-i18n="jquery-pro-3">Gran cantidad de plugins y documentación.</li><li data-i18n="jquery-pro-4">Compatibilidad entre navegadores.</li></ul></div>
+<div class="card"><h3 data-i18n="jquery-cons">Desventajas</h3><ul>
+<li data-i18n="jquery-con-1">Añade peso extra a la página.</li><li data-i18n="jquery-con-2">JS moderno ya cubre gran parte de sus funciones.</li><li data-i18n="jquery-con-3">Menos usado en proyectos nuevos.</li><li data-i18n="jquery-con-4">No sustituye a frameworks de interfaz modernos.</li></ul></div>
 </div>
-<h2>Fuentes / Bibliografía</h2>
+<h2 data-i18n="sources-title">Fuentes / Bibliografía</h2>
 <ul>
 <li>jQuery Foundation. <em>jQuery API Documentation</em>. <a href="https://api.jquery.com/" target="_blank" rel="noopener">api.jquery.com</a></li>
 <li>W3Schools. <em>jQuery Tutorial</em>. <a href="https://www.w3schools.com/jquery/" target="_blank" rel="noopener">w3schools.com/jquery</a></li>

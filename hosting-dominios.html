@@ -31,35 +31,35 @@
 </header>
 <main>
 <h1 data-i18n="page-heading-hosting">Hosting y Dominios</h1>
-<h2>Web Hosting: tipos</h2>
+<h2 data-i18n="hosting-types-title">Web Hosting: tipos</h2>
 <div class="table-wrap"><table>
-<tr><th>Tipo</th><th>Descripción</th><th>Ideal para</th></tr>
-<tr><td>Compartido</td><td>Varios sitios comparten un mismo servidor y sus recursos.</td><td>Blogs y sitios pequeños, bajo costo.</td></tr>
-<tr><td>VPS</td><td>Servidor virtual con recursos dedicados y control del sistema.</td><td>Proyectos medianos que necesitan configuración propia.</td></tr>
-<tr><td>Nube</td><td>Recursos distribuidos en varios servidores, escalan según la demanda.</td><td>Aplicaciones con tráfico variable o alto.</td></tr>
+<tr><th data-i18n="hosting-type">Tipo</th><th data-i18n="hosting-description">Descripción</th><th data-i18n="hosting-ideal">Ideal para</th></tr>
+<tr><td data-i18n="hosting-shared">Compartido</td><td data-i18n="hosting-shared-desc">Varios sitios comparten un mismo servidor y sus recursos.</td><td data-i18n="hosting-shared-ideal">Blogs y sitios pequeños, bajo costo.</td></tr>
+<tr><td>VPS</td><td data-i18n="hosting-vps-desc">Servidor virtual con recursos dedicados y control del sistema.</td><td data-i18n="hosting-vps-ideal">Proyectos medianos que necesitan configuración propia.</td></tr>
+<tr><td data-i18n="hosting-cloud">Nube</td><td data-i18n="hosting-cloud-desc">Recursos distribuidos en varios servidores, escalan según la demanda.</td><td data-i18n="hosting-cloud-ideal">Aplicaciones con tráfico variable o alto.</td></tr>
 </table></div>
-<h3>¿Qué es Vercel?</h3>
-<p><strong>Vercel</strong> es una plataforma en la nube para desplegar sitios y aplicaciones frontend. Se conecta con GitHub, publica automáticamente cada vez que subes cambios, entrega HTTPS y ofrece un plan gratuito para proyectos personales y escolares. Es la empresa creadora de Next.js.</p>
-<h2>Dominios</h2>
+<h3 data-i18n="hosting-vercel-title">¿Qué es Vercel?</h3>
+<p data-i18n-html="hosting-vercel-text"><strong>Vercel</strong> es una plataforma en la nube para desplegar sitios y aplicaciones frontend. Se conecta con GitHub, publica automáticamente cada vez que subes cambios, entrega HTTPS y ofrece un plan gratuito para proyectos personales y escolares. Es la empresa creadora de Next.js.</p>
+<h2 data-i18n="hosting-domains-title">Dominios</h2>
 <ul>
-<li><strong>TLD (dominio de nivel superior):</strong> la terminación del dominio. <code>.com</code> (comercial), <code>.net</code> (redes y tecnología), <code>.org</code> (organizaciones).</li>
-<li><strong>Subdominio:</strong> prefijo antes del dominio principal, por ejemplo <code>blog.codesphere.com</code> o <code>tienda.codesphere.com</code>.</li>
+<li data-i18n-html="hosting-tld"><strong>TLD (dominio de nivel superior):</strong> la terminación del dominio. <code>.com</code> (comercial), <code>.net</code> (redes y tecnología), <code>.org</code> (organizaciones).</li>
+<li data-i18n-html="hosting-subdomain"><strong>Subdominio:</strong> prefijo antes del dominio principal, por ejemplo <code>blog.codesphere.com</code> o <code>tienda.codesphere.com</code>.</li>
 </ul>
-<h2>Flujo de propagación DNS</h2>
-<p>El DNS (Sistema de Nombres de Dominio) traduce un nombre como <code>codesphere.com</code> en una dirección IP.</p>
+<h2 data-i18n="hosting-dns-title">Flujo de propagación DNS</h2>
+<p data-i18n-html="hosting-dns-text">El DNS (Sistema de Nombres de Dominio) traduce un nombre como <code>codesphere.com</code> en una dirección IP.</p>
 <div class="flow">
-<div class="step"><b>1</b>Usuario escribe el dominio en el navegador</div><div class="arrow">&#10140;</div>
-<div class="step"><b>2</b>Resolver DNS (ISP) consulta su caché</div><div class="arrow">&#10140;</div>
-<div class="step"><b>3</b>Servidor raíz indica el servidor del TLD (.com)</div><div class="arrow">&#10140;</div>
-<div class="step"><b>4</b>Servidor autoritativo entrega la IP</div><div class="arrow">&#10140;</div>
-<div class="step"><b>5</b>El navegador se conecta al hosting y carga el sitio</div>
+<div class="step"><b>1</b><span data-i18n="hosting-dns-step-1">Usuario escribe el dominio en el navegador</span></div><div class="arrow">&#10140;</div>
+<div class="step"><b>2</b><span data-i18n="hosting-dns-step-2">Resolver DNS (ISP) consulta su caché</span></div><div class="arrow">&#10140;</div>
+<div class="step"><b>3</b><span data-i18n="hosting-dns-step-3">Servidor raíz indica el servidor del TLD (.com)</span></div><div class="arrow">&#10140;</div>
+<div class="step"><b>4</b><span data-i18n="hosting-dns-step-4">Servidor autoritativo entrega la IP</span></div><div class="arrow">&#10140;</div>
+<div class="step"><b>5</b><span data-i18n="hosting-dns-step-5">El navegador se conecta al hosting y carga el sitio</span></div>
 </div>
-<div class="note">Al cambiar los registros DNS, la propagación puede tardar desde minutos hasta 48 horas, porque cada resolver guarda en caché la información según su TTL.</div>
-<h2>Fuentes / Bibliografía</h2>
+<div class="note" data-i18n="hosting-dns-note">Al cambiar los registros DNS, la propagación puede tardar desde minutos hasta 48 horas, porque cada resolver guarda en caché la información según su TTL.</div>
+<h2 data-i18n="sources-title">Fuentes / Bibliografía</h2>
 <ul>
 <li>Vercel. <em>Documentation</em>. <a href="https://vercel.com/docs" target="_blank" rel="noopener">vercel.com/docs</a></li>
-<li>MDN Web Docs. <em>¿Qué es un nombre de dominio?</em> <a href="https://developer.mozilla.org/es/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name" target="_blank" rel="noopener">developer.mozilla.org</a></li>
-<li>Cloudflare Learning Center. <em>¿Qué es el DNS?</em> <a href="https://www.cloudflare.com/es-la/learning/dns/what-is-dns/" target="_blank" rel="noopener">cloudflare.com</a></li>
+<li>MDN Web Docs. <em data-i18n="hosting-domain-reference">¿Qué es un nombre de dominio?</em> <a href="https://developer.mozilla.org/es/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name" target="_blank" rel="noopener">developer.mozilla.org</a></li>
+<li>Cloudflare Learning Center. <em data-i18n="hosting-dns-reference">¿Qué es el DNS?</em> <a href="https://www.cloudflare.com/es-la/learning/dns/what-is-dns/" target="_blank" rel="noopener">cloudflare.com</a></li>
 </ul>
 </main>
 <footer><p data-i18n="footer-text">&copy; 2026 CodeSphere — Proyecto escolar de desarrollo web.</p></footer>

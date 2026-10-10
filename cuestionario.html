@@ -31,46 +31,46 @@
 </header>
 <main>
 <h1 data-i18n="page-heading-quiz">Cuestionario de repaso</h1>
-<p>Responde las 8 preguntas y presiona <strong>Calificar</strong> para ver tu puntaje y la retroalimentación.</p>
+<p data-i18n-html="quiz-instructions">Responde las 8 preguntas y presiona <strong>Calificar</strong> para ver tu puntaje y la retroalimentación.</p>
 <form id="quiz-form">
-<fieldset class="question" id="q1"><legend>1. ¿Qué es JavaScript Vanilla?</legend>
-<label><input type="radio" name="q1" value="a"> JavaScript puro, sin librerías ni frameworks</label>
-<label><input type="radio" name="q1" value="b"> Un framework de Google</label>
-<label><input type="radio" name="q1" value="c"> Una versión de Java</label>
+<fieldset class="question" id="q1"><legend data-i18n="quiz-q1">1. ¿Qué es JavaScript Vanilla?</legend>
+<label><input type="radio" name="q1" value="a"><span data-i18n="quiz-q1-a"> JavaScript puro, sin librerías ni frameworks</span></label>
+<label><input type="radio" name="q1" value="b"><span data-i18n="quiz-q1-b"> Un framework de Google</span></label>
+<label><input type="radio" name="q1" value="c"><span data-i18n="quiz-q1-c"> Una versión de Java</span></label>
 <p class="fb"></p></fieldset>
-<fieldset class="question" id="q2"><legend>2. Verdadero o falso: el CSS define la estructura de una página web.</legend>
-<label><input type="radio" name="q2" value="v"> Verdadero</label>
-<label><input type="radio" name="q2" value="f"> Falso</label>
+<fieldset class="question" id="q2"><legend data-i18n="quiz-q2">2. Verdadero o falso: el CSS define la estructura de una página web.</legend>
+<label><input type="radio" name="q2" value="v"><span data-i18n="quiz-true"> Verdadero</span></label>
+<label><input type="radio" name="q2" value="f"><span data-i18n="quiz-false"> Falso</span></label>
 <p class="fb"></p></fieldset>
-<fieldset class="question" id="q3"><legend>3. ¿Qué símbolo usa jQuery como función principal?</legend>
+<fieldset class="question" id="q3"><legend data-i18n="quiz-q3">3. ¿Qué símbolo usa jQuery como función principal?</legend>
 <label><input type="radio" name="q3" value="a"> #</label>
 <label><input type="radio" name="q3" value="b"> $</label>
 <label><input type="radio" name="q3" value="c"> @</label>
 <p class="fb"></p></fieldset>
-<fieldset class="question" id="q4"><legend>4. Verdadero o falso: JSON.parse() convierte una cadena JSON en un objeto JavaScript.</legend>
-<label><input type="radio" name="q4" value="v"> Verdadero</label>
-<label><input type="radio" name="q4" value="f"> Falso</label>
+<fieldset class="question" id="q4"><legend data-i18n="quiz-q4">4. Verdadero o falso: JSON.parse() convierte una cadena JSON en un objeto JavaScript.</legend>
+<label><input type="radio" name="q4" value="v"><span data-i18n="quiz-true"> Verdadero</span></label>
+<label><input type="radio" name="q4" value="f"><span data-i18n="quiz-false"> Falso</span></label>
 <p class="fb"></p></fieldset>
-<fieldset class="question" id="q5"><legend>5. ¿Cuál de estos es JSON válido?</legend>
-<label><input type="radio" name="q5" value="a"> {nombre: 'Ana'}</label>
-<label><input type="radio" name="q5" value="b"> {"nombre": "Ana"}</label>
-<label><input type="radio" name="q5" value="c"> {nombre = Ana}</label>
+<fieldset class="question" id="q5"><legend data-i18n="quiz-q5">5. ¿Cuál de estos es JSON válido?</legend>
+<label><input type="radio" name="q5" value="a"><span data-i18n="quiz-q5-a">{nombre: 'Ana'}</span></label>
+<label><input type="radio" name="q5" value="b"><span data-i18n="quiz-q5-b">{"nombre": "Ana"}</span></label>
+<label><input type="radio" name="q5" value="c"><span data-i18n="quiz-q5-c">{nombre = Ana}</span></label>
 <p class="fb"></p></fieldset>
-<fieldset class="question" id="q6"><legend>6. Verdadero o falso: Vercel es una plataforma para desplegar proyectos frontend.</legend>
-<label><input type="radio" name="q6" value="v"> Verdadero</label>
-<label><input type="radio" name="q6" value="f"> Falso</label>
+<fieldset class="question" id="q6"><legend data-i18n="quiz-q6">6. Verdadero o falso: Vercel es una plataforma para desplegar proyectos frontend.</legend>
+<label><input type="radio" name="q6" value="v"><span data-i18n="quiz-true"> Verdadero</span></label>
+<label><input type="radio" name="q6" value="f"><span data-i18n="quiz-false"> Falso</span></label>
 <p class="fb"></p></fieldset>
-<fieldset class="question" id="q7"><legend>7. ¿Cuál es un TLD?</legend>
+<fieldset class="question" id="q7"><legend data-i18n="quiz-q7">7. ¿Cuál es un TLD?</legend>
 <label><input type="radio" name="q7" value="a"> blog</label>
 <label><input type="radio" name="q7" value="b"> .com</label>
 <label><input type="radio" name="q7" value="c"> www</label>
 <p class="fb"></p></fieldset>
-<fieldset class="question" id="q8"><legend>8. Verdadero o falso: el DNS traduce nombres de dominio a direcciones IP.</legend>
-<label><input type="radio" name="q8" value="v"> Verdadero</label>
-<label><input type="radio" name="q8" value="f"> Falso</label>
+<fieldset class="question" id="q8"><legend data-i18n="quiz-q8">8. Verdadero o falso: el DNS traduce nombres de dominio a direcciones IP.</legend>
+<label><input type="radio" name="q8" value="v"><span data-i18n="quiz-true"> Verdadero</span></label>
+<label><input type="radio" name="q8" value="f"><span data-i18n="quiz-false"> Falso</span></label>
 <p class="fb"></p></fieldset>
-<button type="submit" class="btn">Calificar</button>
-<button type="reset" class="btn sec">Reiniciar</button>
+<button type="submit" class="btn" data-i18n="quiz-submit">Calificar</button>
+<button type="reset" class="btn sec" data-i18n="quiz-reset">Reiniciar</button>
 </form>
 <div id="result" class="result" role="status"></div>
 </main>

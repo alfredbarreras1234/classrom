@@ -31,44 +31,44 @@
 </header>
 <main>
 <h1 data-i18n="page-heading-json">JSON</h1>
-<h2>¿Qué es JSON y por qué es el estándar?</h2>
-<p><strong>JSON</strong> (JavaScript Object Notation) es un formato de texto ligero para intercambiar datos. Es el estándar porque es fácil de leer para humanos, simple de procesar para las máquinas, independiente del lenguaje y nativo en JavaScript.</p>
-<h2>Estructura</h2>
+<h2 data-i18n="json-intro-title">¿Qué es JSON y por qué es el estándar?</h2>
+<p data-i18n-html="json-intro-text"><strong>JSON</strong> (JavaScript Object Notation) es un formato de texto ligero para intercambiar datos. Es el estándar porque es fácil de leer para humanos, simple de procesar para las máquinas, independiente del lenguaje y nativo en JavaScript.</p>
+<h2 data-i18n="json-structure-title">Estructura</h2>
 <ul>
-<li><strong>Clave-valor:</strong> <code>"nombre": "Ana"</code>. La clave siempre va entre comillas dobles.</li>
-<li><strong>Objetos:</strong> conjuntos de pares clave-valor entre llaves <code>{ }</code>.</li>
-<li><strong>Arreglos:</strong> listas ordenadas entre corchetes <code>[ ]</code>.</li>
-<li><strong>Valores permitidos:</strong> cadena, número, booleano, <code>null</code>, objeto y arreglo.</li>
+<li data-i18n-html="json-key-value"><strong>Clave-valor:</strong> <code>"nombre": "Ana"</code>. La clave siempre va entre comillas dobles.</li>
+<li data-i18n-html="json-objects"><strong>Objetos:</strong> conjuntos de pares clave-valor entre llaves <code>{ }</code>.</li>
+<li data-i18n-html="json-arrays"><strong>Arreglos:</strong> listas ordenadas entre corchetes <code>[ ]</code>.</li>
+<li data-i18n-html="json-values"><strong>Valores permitidos:</strong> cadena, número, booleano, <code>null</code>, objeto y arreglo.</li>
 </ul>
-<h2>Objeto JS vs Cadena JSON</h2>
-<pre><code><span class="c">// Objeto JavaScript</span>
+<h2 data-i18n="json-object-string-title">Objeto JS vs Cadena JSON</h2>
+<pre><code><span class="c" data-i18n="json-code-object">// Objeto JavaScript</span>
 <span class="k">const</span> alumno = {
   nombre: <span class="s">'Ana'</span>,
   edad: <span class="n">17</span>,
   materias: [<span class="s">'HTML'</span>, <span class="s">'CSS'</span>, <span class="s">'JS'</span>]
 };
 
-<span class="c">// Cadena JSON (texto)</span>
+<span class="c" data-i18n="json-code-string">// Cadena JSON (texto)</span>
 <span class="k">const</span> texto = <span class="s">'{"nombre":"Ana","edad":17,"materias":["HTML","CSS","JS"]}'</span>;
 
-<span class="c">// Conversión</span>
+<span class="c" data-i18n="json-code-conversion">// Conversión</span>
 <span class="k">const</span> aTexto = JSON.stringify(alumno);
 <span class="k">const</span> aObjeto = JSON.parse(texto);
 console.log(aObjeto.nombre);</code></pre>
 <div class="table-wrap"><table>
-<tr><th>Característica</th><th>Objeto JS</th><th>Cadena JSON</th></tr>
-<tr><td>Tipo</td><td>Estructura en memoria</td><td>Texto</td></tr>
-<tr><td>Claves</td><td>Sin comillas o con ellas</td><td>Siempre comillas dobles</td></tr>
-<tr><td>Comillas en texto</td><td>Simples o dobles</td><td>Solo dobles</td></tr>
-<tr><td>Funciones</td><td>Permitidas</td><td>No permitidas</td></tr>
+<tr><th data-i18n="json-feature">Característica</th><th>Objeto JS</th><th>Cadena JSON</th></tr>
+<tr><td data-i18n="json-type">Tipo</td><td data-i18n="json-memory-structure">Estructura en memoria</td><td data-i18n="json-text">Texto</td></tr>
+<tr><td data-i18n="json-keys">Claves</td><td data-i18n="json-quotes-optional">Sin comillas o con ellas</td><td data-i18n="json-quotes-always">Siempre comillas dobles</td></tr>
+<tr><td data-i18n="json-string-quotes">Comillas en texto</td><td data-i18n="json-single-double">Simples o dobles</td><td data-i18n="json-double-only">Solo dobles</td></tr>
+<tr><td data-i18n="json-functions">Funciones</td><td data-i18n="json-allowed">Permitidas</td><td data-i18n="json-not-allowed">No permitidas</td></tr>
 </table></div>
-<h2>Comunicación con APIs y servidores</h2>
-<p>El navegador (cliente) envía una petición a una API y el servidor responde normalmente con JSON. Después, el cliente convierte ese texto en objeto y lo muestra en la página.</p>
+<h2 data-i18n="json-api-title">Comunicación con APIs y servidores</h2>
+<p data-i18n="json-api-text">El navegador (cliente) envía una petición a una API y el servidor responde normalmente con JSON. Después, el cliente convierte ese texto en objeto y lo muestra en la página.</p>
 <pre><code>fetch(<span class="s">"https://api.ejemplo.com/usuarios"</span>)
   .then(<span class="k">function</span> (respuesta) { <span class="k">return</span> respuesta.json(); })
   .then(<span class="k">function</span> (datos) { console.log(datos); })
   .catch(<span class="k">function</span> (error) { console.error(error); });</code></pre>
-<h2>Fuentes / Bibliografía</h2>
+<h2 data-i18n="sources-title">Fuentes / Bibliografía</h2>
 <ul>
 <li>MDN Web Docs. <em>JSON</em>. <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/JSON" target="_blank" rel="noopener">developer.mozilla.org</a></li>
 <li>W3Schools. <em>JSON Tutorial</em>. <a href="https://www.w3schools.com/js/js_json_intro.asp" target="_blank" rel="noopener">w3schools.com/js/js_json_intro.asp</a></li>

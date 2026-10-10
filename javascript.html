@@ -32,40 +32,40 @@
 <main>
 <h1 data-i18n="js-title">JavaScript Vanilla</h1>
 <h2 data-i18n="concept-title">Concepto</h2>
-<p data-i18n="concept-text"><strong>JavaScript Vanilla</strong> es JavaScript puro: el lenguaje estándar del navegador usado sin librerías ni frameworks como jQuery, React o Vue. Permite que una página reaccione al usuario, modifique su contenido y se comunique con servidores.</p>
+<p data-i18n-html="concept-text"><strong>JavaScript Vanilla</strong> es JavaScript puro: el lenguaje estándar del navegador usado sin librerías ni frameworks como jQuery, React o Vue. Permite que una página reaccione al usuario, modifique su contenido y se comunique con servidores.</p>
 <h2 data-i18n="trinomio-title">El trinomio HTML, CSS y JS</h2>
 <div class="grid">
-<div class="card"><h3 data-i18n="html-title">HTML</h3><p data-i18n="html-text">Define la <strong>estructura</strong> y el contenido: títulos, párrafos, formularios, imágenes.</p></div>
-<div class="card"><h3 data-i18n="css-title">CSS</h3><p data-i18n="css-text">Define la <strong>presentación</strong>: colores, tipografías, espacios y diseño responsivo.</p></div>
-<div class="card"><h3 data-i18n="js-card-title">JS</h3><p data-i18n="js-card-text">Define el <strong>comportamiento</strong>: interacciones, validaciones y datos dinámicos.</p></div>
+<div class="card"><h3 data-i18n="html-title">HTML</h3><p data-i18n-html="html-text">Define la <strong>estructura</strong> y el contenido: títulos, párrafos, formularios, imágenes.</p></div>
+<div class="card"><h3 data-i18n="css-title">CSS</h3><p data-i18n-html="css-text">Define la <strong>presentación</strong>: colores, tipografías, espacios y diseño responsivo.</p></div>
+<div class="card"><h3 data-i18n="js-card-title">JS</h3><p data-i18n-html="js-card-text">Define el <strong>comportamiento</strong>: interacciones, validaciones y datos dinámicos.</p></div>
 </div>
 <h2 data-i18n="variables-title">Variables, funciones y eventos</h2>
 <ul>
-<li data-i18n="variables-text"><strong>Variables:</strong> guardan datos. Se declaran con <code>let</code> (valor cambiable) o <code>const</code> (valor constante).</li>
-<li data-i18n="functions-text"><strong>Funciones:</strong> bloques de código reutilizables que pueden recibir parámetros y devolver un resultado.</li>
-<li data-i18n="events-text"><strong>Eventos:</strong> acciones del usuario (clic, teclado, envío de formulario) que se capturan con <code>addEventListener</code>.</li>
+<li data-i18n-html="variables-text"><strong>Variables:</strong> guardan datos. Se declaran con <code>let</code> (valor cambiable) o <code>const</code> (valor constante).</li>
+<li data-i18n-html="functions-text"><strong>Funciones:</strong> bloques de código reutilizables que pueden recibir parámetros y devolver un resultado.</li>
+<li data-i18n-html="events-text"><strong>Eventos:</strong> acciones del usuario (clic, teclado, envío de formulario) que se capturan con <code>addEventListener</code>.</li>
 </ul>
 <h3 data-i18n="code-example-title">Ejemplo de código</h3>
-<pre><code><span class="c">// Variables</span>
+<pre><code><span class="c" data-i18n="js-code-variables">// Variables</span>
 <span class="k">const</span> nombre = <span class="s">"CodeSphere"</span>;
 <span class="k">let</span> visitas = <span class="n">0</span>;
 
-<span class="c">// Función</span>
+<span class="c" data-i18n="js-code-function">// Función</span>
 <span class="k">function</span> saludar(usuario) {
-  <span class="k">return</span> <span class="s">"Hola, "</span> + usuario + <span class="s">" bienvenido a "</span> + nombre;
+  <span class="k">return</span> <span class="s" data-i18n="js-code-greeting">"Hola, "</span> + usuario + <span class="s" data-i18n="js-code-welcome">" bienvenido a "</span> + nombre;
 }
 
-<span class="c">// Evento</span>
+<span class="c" data-i18n="js-code-event">// Evento</span>
 document.getElementById(<span class="s">"btn"</span>).addEventListener(<span class="s">"click"</span>, <span class="k">function</span> () {
   visitas++;
-  alert(saludar(<span class="s">"Alfred"</span>) + <span class="s">" - clics: "</span> + visitas);
+  alert(saludar(<span class="s">"Alfred"</span>) + <span class="s" data-i18n="js-code-clicks">" - clics: "</span> + visitas);
 });</code></pre>
 <h2 data-i18n="table-title">Cuadro comparativo</h2>
 <div class="table-wrap"><table>
 <tr><th data-i18n="table-tech">Tecnología</th><th data-i18n="table-func">Función</th><th data-i18n="table-example">Ejemplo</th></tr>
-<tr><td>HTML</td><td data-i18n="html-struct">Estructura</td><td><code>&lt;h1&gt;Título&lt;/h1&gt;</code></td></tr>
+<tr><td>HTML</td><td data-i18n="html-struct">Estructura</td><td><code>&lt;h1&gt;<span data-i18n="example-title">Título</span>&lt;/h1&gt;</code></td></tr>
 <tr><td>CSS</td><td data-i18n="css-struct">Estilo</td><td><code>h1 { color: #0EA5E9; }</code></td></tr>
-<tr><td>JavaScript</td><td data-i18n="js-struct">Comportamiento</td><td><code>alert("Hola");</code></td></tr>
+<tr><td>JavaScript</td><td data-i18n="js-struct">Comportamiento</td><td><code>alert("<span data-i18n="example-hello">Hola</span>");</code></td></tr>
 </table></div>
 <div class="note" data-i18n="note-text">Nota: aprender JS Vanilla primero facilita entender cualquier librería o framework después.</div>
 <h2 data-i18n="sources-title">Fuentes / Bibliografía</h2>
