@@ -3,30 +3,31 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contacto | CodeSphere</title>
+<title data-i18n="page-title-contact">Contacto | CodeSphere</title>
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <header class="site-header">
 <nav class="nav">
   <img src="./imagenes/ChatGPT Image 8 oct 2026, 07_35_01 a.m..png" style="max-height: 40px; width: auto; object-fit: contain;" alt="Logo CodeSphere">
-  <a class="brand" href="index.html">Construye el <span>Futuro Web</span></a>
+  <a class="brand" href="index.html"><span data-i18n="brand-prefix">Construye el</span> <span data-i18n="brand-accent">Futuro Web</span></a>
   <button class="nav-toggle" aria-label="Abrir menú">☰</button>
   <button class="theme-toggle" type="button" aria-label="Cambiar modo de color" aria-pressed="false">☾ Modo oscuro</button>
+  <button class="lang-toggle" type="button" data-lang="en" aria-label="Cambiar idioma a inglés">English</button>
   <ul id="menu">
-    <li><a href="index.html">Inicio</a></li>
-    <li><a href="javascript.html">JavaScript</a></li>
-    <li><a href="jquery.html">jQuery</a></li>
-    <li><a href="json.html">JSON</a></li>
-    <li><a href="hosting-dominios.html">Hosting y Dominios</a></li>
-    <li><a href="cuestionario.html">Cuestionario</a></li>
-    <li><a href="herramientas-ia.html">Herramientas IA</a></li>
-    <li><a href="contacto.html">Contacto</a></li>
+    <li><a href="index.html" data-i18n="nav-home">Inicio</a></li>
+    <li><a href="javascript.html" data-i18n="nav-javascript">JavaScript</a></li>
+    <li><a href="jquery.html" data-i18n="nav-jquery">jQuery</a></li>
+    <li><a href="json.html" data-i18n="nav-json">JSON</a></li>
+    <li><a href="hosting-dominios.html" data-i18n="nav-hosting">Hosting y Dominios</a></li>
+    <li><a href="cuestionario.html" data-i18n="nav-quiz">Cuestionario</a></li>
+    <li><a href="herramientas-ia.html" data-i18n="nav-ai">Herramientas IA</a></li>
+    <li><a href="contacto.html" data-i18n="nav-contact">Contacto</a></li>
   </ul>
 </nav>
 </header>
 <main>
-<h1>Contacto</h1>
+<h1 data-i18n="page-heading-contact">Contacto</h1>
 <p>¿Tienes una pregunta o sugerencia? Puedes abrir nuestro canal de Discord o enviar el formulario cuando esté configurado.</p>
 <p><a class="btn sec" href="https://discord.com/channels/1558110260764614658/1558110261846609995" target="_blank" rel="noopener noreferrer">Abrir canal de Discord</a></p>
 <form id="contact-form" class="contact-form">
@@ -41,7 +42,7 @@
 <p id="contact-status" class="contact-status" role="status" aria-live="polite"></p>
 <div class="note">El botón abre el canal; no envía el contenido del formulario. Para activar el envío automático, en Vercel ve a <strong>Settings &gt; Environment Variables</strong>, agrega <code>DISCORD_WEBHOOK_URL</code> con la URL del webhook de tu canal y vuelve a desplegar el proyecto. Mantén esa URL solo en Vercel; no la publiques en el código.</div>
 </main>
-<footer><p>&copy; 2026 CodeSphere — Proyecto escolar de desarrollo web.</p></footer>
+<footer><p data-i18n="footer-text">&copy; 2026 CodeSphere — Proyecto escolar de desarrollo web.</p></footer>
 <script src="script.js"></script>
 </body>
 </html>

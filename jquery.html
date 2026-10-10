@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>jQuery | CodeSphere</title>
+<title data-i18n="page-title-jquery">jQuery | CodeSphere</title>
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -12,23 +12,24 @@
   <!-- Se corrigió el tamaño a uno adecuado para un logo (ej: 150px) y se eliminó el '>' extra -->
   <img src="./imagenes/ChatGPT Image 8 oct 2026, 07_35_01 a.m..png" style="max-height: 40px; width: auto; object-fit: contain;" alt="Logo CodeSphere">
 
-  <a class="brand" href="index.html">Construye el <span>Futuro Web</span></a>
+  <a class="brand" href="index.html"><span data-i18n="brand-prefix">Construye el</span> <span data-i18n="brand-accent">Futuro Web</span></a>
   <button class="nav-toggle" aria-label="Abrir menú">☰</button>
   <button class="theme-toggle" type="button" aria-label="Cambiar modo de color" aria-pressed="false">☾ Modo oscuro</button>
+  <button class="lang-toggle" type="button" data-lang="en" aria-label="Cambiar idioma a inglés">English</button>
   <ul id="menu">
-    <li><a href="index.html">Inicio</a></li>
-    <li><a href="javascript.html">JavaScript</a></li>
-    <li><a href="jquery.html">jQuery</a></li>
-    <li><a href="json.html">JSON</a></li>
-    <li><a href="hosting-dominios.html">Hosting y Dominios</a></li>
-    <li><a href="cuestionario.html">Cuestionario</a></li>
-    <li><a href="herramientas-ia.html">Herramientas IA</a></li>
-    <li><a href="contacto.html">Contacto</a></li>
+    <li><a href="index.html" data-i18n="nav-home">Inicio</a></li>
+    <li><a href="javascript.html" data-i18n="nav-javascript">JavaScript</a></li>
+    <li><a href="jquery.html" data-i18n="nav-jquery">jQuery</a></li>
+    <li><a href="json.html" data-i18n="nav-json">JSON</a></li>
+    <li><a href="hosting-dominios.html" data-i18n="nav-hosting">Hosting y Dominios</a></li>
+    <li><a href="cuestionario.html" data-i18n="nav-quiz">Cuestionario</a></li>
+    <li><a href="herramientas-ia.html" data-i18n="nav-ai">Herramientas IA</a></li>
+    <li><a href="contacto.html" data-i18n="nav-contact">Contacto</a></li>
   </ul>
 </nav>
 </header>
 <main>
-<h1>jQuery</h1>
+<h1 data-i18n="page-heading-jquery">jQuery</h1>
 <h2>¿Qué es jQuery y por qué nació?</h2>
 <p><strong>jQuery</strong> es una librería de JavaScript creada por John Resig en 2006. Nació para simplificar tareas como seleccionar elementos, manejar eventos, animar y hacer peticiones AJAX, en una época en la que los navegadores eran muy incompatibles entre sí. Su lema: <em>"escribe menos, haz más"</em>.</p>
 <h2>Sintaxis del selector $</h2>
@@ -57,7 +58,7 @@ $(<span class="s">"p"</span>).css(<span class="s">"color"</span>, <span class="s
 <li>MDN Web Docs. <em>Fetch API</em>. <a href="https://developer.mozilla.org/es/docs/Web/API/Fetch_API" target="_blank" rel="noopener">developer.mozilla.org/es/docs/Web/API/Fetch_API</a></li>
 </ul>
 </main>
-<footer><p>&copy; 2026 CodeSphere — Proyecto escolar de desarrollo web.</p></footer>
+<footer><p data-i18n="footer-text">&copy; 2026 CodeSphere — Proyecto escolar de desarrollo web.</p></footer>
 <script src="script.js"></script>
 </body>
 </html>
