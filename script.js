@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   var translations = {
     es: {
+      "page-title": "Inicio | CodeSphere",
       "brand-prefix": "Construye el",
       "brand-accent": "Futuro Web",
       "nav-home": "Inicio",
@@ -40,9 +41,33 @@ document.addEventListener("DOMContentLoaded", function () {
       "css-struct": "Estilo",
       "js-struct": "Comportamiento",
       "note-text": "Nota: aprender JS Vanilla primero facilita entender cualquier librería o framework después.",
-      "sources-title": "Fuentes / Bibliografía"
+      "sources-title": "Fuentes / Bibliografía",
+      "home-title": "Construye el Futuro Web",
+      "home-tag": "Aprende web. Construye futuro.",
+      "home-intro": "CodeSphere es una plataforma educativa que explica de forma clara y práctica las bases del desarrollo web: JavaScript, jQuery, JSON, hosting y dominios, además de herramientas de IA para crear sitios.",
+      "home-start": "Empezar a aprender",
+      "home-description-title": "Descripción",
+      "home-description": "Reunimos en un solo lugar explicaciones breves, ejemplos de código y un cuestionario interactivo para reforzar lo aprendido.",
+      "home-audience-title": "Público objetivo",
+      "home-audience": "Estudiantes de bachillerato y primeros años de carrera, y personas autodidactas que quieren iniciarse en la programación web.",
+      "home-value-title": "Propuesta de valor",
+      "home-value": "Contenido directo, ejemplos listos para copiar, comparaciones claras y autoevaluación inmediata, todo gratuito y accesible desde cualquier dispositivo.",
+      "home-slogan-title": "Eslogan",
+      "home-slogan": "\"Aprende web. Construye futuro.\"",
+      "home-colors-title": "Paleta de colores y psicología del color",
+      "home-dark-blue": "Azul Oscuro #1E293B",
+      "home-dark-blue-desc": "Transmite seriedad, confianza y profesionalismo. Se asocia con la tecnología y la estabilidad.",
+      "home-turquoise": "Turquesa #0EA5E9",
+      "home-turquoise-desc": "Evoca claridad, innovación y comunicación. Invita a la acción y da sensación de modernidad.",
+      "home-green": "Verde #10B981",
+      "home-green-desc": "Representa crecimiento, progreso y éxito. Refuerza la idea de avanzar en el aprendizaje.",
+      "home-light-gray": "Gris Claro #F8FAFC",
+      "home-light-gray-desc": "Aporta limpieza y espacio visual, mejora la legibilidad y descansa la vista.",
+      "home-color-note": "Combinación: el azul oscuro da autoridad, el turquesa y el verde aportan energía y optimismo, y el gris claro mantiene el equilibrio y el contraste.",
+      "footer-text": "© 2026 CodeSphere — Proyecto escolar de desarrollo web."
     },
     en: {
+      "page-title": "Home | CodeSphere",
       "brand-prefix": "Build the",
       "brand-accent": "Web Future",
       "nav-home": "Home",
@@ -76,7 +101,30 @@ document.addEventListener("DOMContentLoaded", function () {
       "css-struct": "Style",
       "js-struct": "Behavior",
       "note-text": "Note: learning JS Vanilla first makes it easier to understand any library or framework afterward.",
-      "sources-title": "Sources / Bibliography"
+      "sources-title": "Sources / Bibliography",
+      "home-title": "Build the Web Future",
+      "home-tag": "Learn web. Build the future.",
+      "home-intro": "CodeSphere is an educational platform that clearly and practically explains the foundations of web development: JavaScript, jQuery, JSON, hosting and domains, as well as AI tools for creating websites.",
+      "home-start": "Start learning",
+      "home-description-title": "Description",
+      "home-description": "We bring together brief explanations, code examples, and an interactive quiz to reinforce what you have learned.",
+      "home-audience-title": "Target audience",
+      "home-audience": "High school and early college students, as well as self-taught learners who want to get started with web programming.",
+      "home-value-title": "Value proposition",
+      "home-value": "Straightforward content, copy-ready examples, clear comparisons, and instant self-assessment—all free and accessible from any device.",
+      "home-slogan-title": "Slogan",
+      "home-slogan": "\"Learn web. Build the future.\"",
+      "home-colors-title": "Color palette and color psychology",
+      "home-dark-blue": "Dark Blue #1E293B",
+      "home-dark-blue-desc": "Conveys seriousness, trust, and professionalism. It is associated with technology and stability.",
+      "home-turquoise": "Turquoise #0EA5E9",
+      "home-turquoise-desc": "Evokes clarity, innovation, and communication. It encourages action and feels modern.",
+      "home-green": "Green #10B981",
+      "home-green-desc": "Represents growth, progress, and success. It reinforces the idea of moving forward in learning.",
+      "home-light-gray": "Light Gray #F8FAFC",
+      "home-light-gray-desc": "Creates a clean, open layout, improves readability, and is easy on the eyes.",
+      "home-color-note": "Combination: dark blue conveys authority, turquoise and green add energy and optimism, and light gray maintains balance and contrast.",
+      "footer-text": "© 2026 CodeSphere — School web development project."
     }
   };
 
@@ -95,6 +143,10 @@ document.addEventListener("DOMContentLoaded", function () {
       langToggle.textContent = current === "es" ? "English" : "Español";
       langToggle.setAttribute("aria-label", current === "es" ? "Cambiar idioma a inglés" : "Cambiar idioma a español");
     }
+    var navToggle = document.querySelector(".nav-toggle");
+    if (navToggle) {
+      navToggle.setAttribute("aria-label", current === "es" ? "Abrir menú" : "Open menu");
+    }
     localStorage.setItem("codesphere-language", current);
   }
 
@@ -102,6 +154,7 @@ document.addEventListener("DOMContentLoaded", function () {
     langToggle.addEventListener("click", function () {
       var nextLanguage = langToggle.dataset.lang || "en";
       applyLanguage(nextLanguage);
+      applyTheme(document.documentElement.getAttribute("data-theme") || "light");
     });
   }
 
@@ -114,8 +167,12 @@ document.addEventListener("DOMContentLoaded", function () {
     document.documentElement.setAttribute("data-theme", theme);
     if (themeToggle) {
       var isDark = theme === "dark";
+      var isEnglish = document.documentElement.lang === "en";
       themeToggle.setAttribute("aria-pressed", String(isDark));
-      themeToggle.textContent = isDark ? "☀ Modo claro" : "☾ Modo oscuro";
+      themeToggle.textContent = isDark
+        ? (isEnglish ? "☀ Light mode" : "☀ Modo claro")
+        : (isEnglish ? "☾ Dark mode" : "☾ Modo oscuro");
+      themeToggle.setAttribute("aria-label", isEnglish ? "Change color mode" : "Cambiar modo de color");
     }
   }
   applyTheme(savedTheme === "dark" ? "dark" : "light");

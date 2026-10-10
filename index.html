@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Inicio | CodeSphere</title>
+<title data-i18n="page-title">Inicio | CodeSphere</title>
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -12,46 +12,47 @@
   <!-- Se corrigió el tamaño a uno adecuado para un logo (ej: 150px) y se eliminó el '>' extra -->
   <img src="./imagenes/ChatGPT Image 8 oct 2026, 07_35_01 a.m..png" style="max-height: 40px; width: auto; object-fit: contain;" alt="Logo CodeSphere">
 
-  <a class="brand" href="index.html">Construye el <span>Futuro Web</span></a>
+  <a class="brand" href="index.html"><span data-i18n="brand-prefix">Construye el</span> <span data-i18n="brand-accent">Futuro Web</span></a>
   <button class="nav-toggle" aria-label="Abrir menú">☰</button>
   <button class="theme-toggle" type="button" aria-label="Cambiar modo de color" aria-pressed="false">☾ Modo oscuro</button>
+  <button class="lang-toggle" type="button" data-lang="en" aria-label="Cambiar idioma a inglés">English</button>
   <ul id="menu">
-    <li><a href="index.html">Inicio</a></li>
-    <li><a href="javascript.html">JavaScript</a></li>
-    <li><a href="jquery.html">jQuery</a></li>
-    <li><a href="json.html">JSON</a></li>
-    <li><a href="hosting-dominios.html">Hosting y Dominios</a></li>
-    <li><a href="cuestionario.html">Cuestionario</a></li>
-    <li><a href="herramientas-ia.html">Herramientas IA</a></li>
-    <li><a href="contacto.html">Contacto</a></li>
+    <li><a href="index.html" data-i18n="nav-home">Inicio</a></li>
+    <li><a href="javascript.html" data-i18n="nav-javascript">JavaScript</a></li>
+    <li><a href="jquery.html" data-i18n="nav-jquery">jQuery</a></li>
+    <li><a href="json.html" data-i18n="nav-json">JSON</a></li>
+    <li><a href="hosting-dominios.html" data-i18n="nav-hosting">Hosting y Dominios</a></li>
+    <li><a href="cuestionario.html" data-i18n="nav-quiz">Cuestionario</a></li>
+    <li><a href="herramientas-ia.html" data-i18n="nav-ai">Herramientas IA</a></li>
+    <li><a href="contacto.html" data-i18n="nav-contact">Contacto</a></li>
   </ul>
 </nav>
 
 </header>
 <section class="hero">
-<h1>Construye el Futuro Web</h1>
-<p class="tag">Aprende web. Construye futuro.</p>
-<p>CodeSphere es una plataforma educativa que explica de forma clara y práctica las bases del desarrollo web: JavaScript, jQuery, JSON, hosting y dominios, además de herramientas de IA para crear sitios.</p>
-<a class="btn" href="javascript.html">Empezar a aprender</a>
+<h1 data-i18n="home-title">Construye el Futuro Web</h1>
+<p class="tag" data-i18n="home-tag">Aprende web. Construye futuro.</p>
+<p data-i18n="home-intro">CodeSphere es una plataforma educativa que explica de forma clara y práctica las bases del desarrollo web: JavaScript, jQuery, JSON, hosting y dominios, además de herramientas de IA para crear sitios.</p>
+<a class="btn" href="javascript.html" data-i18n="home-start">Empezar a aprender</a>
 </section>
 <main>
-<h2>Descripción</h2>
-<p>Reunimos en un solo lugar explicaciones breves, ejemplos de código y un cuestionario interactivo para reforzar lo aprendido.</p>
+<h2 data-i18n="home-description-title">Descripción</h2>
+<p data-i18n="home-description">Reunimos en un solo lugar explicaciones breves, ejemplos de código y un cuestionario interactivo para reforzar lo aprendido.</p>
 <div class="grid">
-<div class="card"><h3>Público objetivo</h3><p>Estudiantes de bachillerato y primeros años de carrera, y personas autodidactas que quieren iniciarse en la programación web.</p></div>
-<div class="card"><h3>Propuesta de valor</h3><p>Contenido directo, ejemplos listos para copiar, comparaciones claras y autoevaluación inmediata, todo gratuito y accesible desde cualquier dispositivo.</p></div>
-<div class="card"><h3>Eslogan</h3><p><strong>"Aprende web. Construye futuro."</strong></p></div>
+<div class="card"><h3 data-i18n="home-audience-title">Público objetivo</h3><p data-i18n="home-audience">Estudiantes de bachillerato y primeros años de carrera, y personas autodidactas que quieren iniciarse en la programación web.</p></div>
+<div class="card"><h3 data-i18n="home-value-title">Propuesta de valor</h3><p data-i18n="home-value">Contenido directo, ejemplos listos para copiar, comparaciones claras y autoevaluación inmediata, todo gratuito y accesible desde cualquier dispositivo.</p></div>
+<div class="card"><h3 data-i18n="home-slogan-title">Eslogan</h3><p><strong data-i18n="home-slogan">"Aprende web. Construye futuro."</strong></p></div>
 </div>
-<h2>Paleta de colores y psicología del color</h2>
+<h2 data-i18n="home-colors-title">Paleta de colores y psicología del color</h2>
 <div class="grid">
-<div class="swatch" style="background:#1E293B">Azul Oscuro #1E293B<small>Transmite seriedad, confianza y profesionalismo. Se asocia con la tecnología y la estabilidad.</small></div>
-<div class="swatch" style="background:#0EA5E9">Turquesa #0EA5E9<small>Evoca claridad, innovación y comunicación. Invita a la acción y da sensación de modernidad.</small></div>
-<div class="swatch" style="background:#10B981">Verde #10B981<small>Representa crecimiento, progreso y éxito. Refuerza la idea de avanzar en el aprendizaje.</small></div>
-<div class="swatch" style="background:#F8FAFC;color:#1E293B;border:1px solid #cbd5e1">Gris Claro #F8FAFC<small>Aporta limpieza y espacio visual, mejora la legibilidad y descansa la vista.</small></div>
+<div class="swatch" style="background:#1E293B"><span data-i18n="home-dark-blue">Azul Oscuro #1E293B</span><small data-i18n="home-dark-blue-desc">Transmite seriedad, confianza y profesionalismo. Se asocia con la tecnología y la estabilidad.</small></div>
+<div class="swatch" style="background:#0EA5E9"><span data-i18n="home-turquoise">Turquesa #0EA5E9</span><small data-i18n="home-turquoise-desc">Evoca claridad, innovación y comunicación. Invita a la acción y da sensación de modernidad.</small></div>
+<div class="swatch" style="background:#10B981"><span data-i18n="home-green">Verde #10B981</span><small data-i18n="home-green-desc">Representa crecimiento, progreso y éxito. Refuerza la idea de avanzar en el aprendizaje.</small></div>
+<div class="swatch" style="background:#F8FAFC;color:#1E293B;border:1px solid #cbd5e1"><span data-i18n="home-light-gray">Gris Claro #F8FAFC</span><small data-i18n="home-light-gray-desc">Aporta limpieza y espacio visual, mejora la legibilidad y descansa la vista.</small></div>
 </div>
-<div class="note">Combinación: el azul oscuro da autoridad, el turquesa y el verde aportan energía y optimismo, y el gris claro mantiene el equilibrio y el contraste.</div>
+<div class="note" data-i18n="home-color-note">Combinación: el azul oscuro da autoridad, el turquesa y el verde aportan energía y optimismo, y el gris claro mantiene el equilibrio y el contraste.</div>
 </main>
-<footer><p>&copy; 2026 CodeSphere — Proyecto escolar de desarrollo web.</p></footer>
+<footer><p data-i18n="footer-text">&copy; 2026 CodeSphere — Proyecto escolar de desarrollo web.</p></footer>
 <script src="script.js"></script>
 </body>
 </html>
